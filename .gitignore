@@ -6,6 +6,7 @@ logs
 data
 pretrained_models
 pretrained_models.zip
+slurm_logs
 
 train.log
 
