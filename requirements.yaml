@@ -2,8 +2,6 @@ name: diff
 channels:
   - conda-forge
   - defaults
-  - https://repo.anaconda.com/pkgs/main
-  - https://repo.anaconda.com/pkgs/r
 dependencies:
   - _libgcc_mutex=0.1=main
   - _openmp_mutex=5.1=1_gnu
@@ -11,6 +9,7 @@ dependencies:
   - argon2-cffi=21.3.0=pyhd3eb1b0_0
   - argon2-cffi-bindings=21.2.0=py310h5eee18b_1
   - arrow-cpp=19.0.0=h865e1df_2
+  - asttokens=3.0.0=pyhd8ed1ab_1
   - async-lru=2.0.4=py310h06a4308_0
   - attrs=24.3.0=py310h06a4308_0
   - aws-c-auth=0.6.19=h5eee18b_0
@@ -33,6 +32,8 @@ dependencies:
   - bokeh=3.7.2=pyhd8ed1ab_1
   - boost-cpp=1.82.0=hdb19cb5_2
   - bottleneck=1.4.2=py310ha9d4c09_0
+  - brotli=1.0.9=h166bdaf_7
+  - brotli-bin=1.0.9=h166bdaf_7
   - brotli-python=1.0.9=py310h6a678d5_9
   - bzip2=1.0.8=h5eee18b_6
   - c-ares=1.19.1=h5eee18b_0
@@ -41,28 +42,36 @@ dependencies:
   - cffi=1.17.1=py310h1fdaa30_1
   - cftime=1.6.4=py310h5eee18b_0
   - charset-normalizer=3.3.2=pyhd3eb1b0_0
+  - click=8.1.8=pyh707e725_0
   - cloudpickle=2.2.1=pyhd8ed1ab_0
   - comm=0.2.1=py310h06a4308_0
+  - contourpy=1.3.1=py310hdb19cb5_0
+  - cycler=0.12.1=pyhd8ed1ab_1
   - cyrus-sasl=2.1.28=h52b45da_1
   - cytoolz=0.11.2=py310h5764c6d_2
   - dask=2024.8.0=pyhd8ed1ab_0
   - dask-core=2024.8.0=pyhd8ed1ab_0
   - dask-expr=1.1.10=pyhd8ed1ab_0
   - debugpy=1.8.11=py310h6a678d5_0
+  - decorator=5.2.1=pyhd8ed1ab_0
   - defusedxml=0.7.1=pyhd3eb1b0_0
   - distributed=2024.8.0=pyhd8ed1ab_0
+  - exceptiongroup=1.2.2=pyhd8ed1ab_1
   - expat=2.6.4=h6a678d5_0
   - fontconfig=2.14.1=h55d465d_3
   - freetype=2.12.1=h4a9f257_0
+  - fsspec=2025.3.2=pyhd8ed1ab_0
   - gflags=2.2.2=he1b5a44_1004
   - glog=0.5.0=h48cff8f_0
   - h11=0.14.0=py310h06a4308_0
   - httpcore=1.0.2=py310h06a4308_0
   - httpx=0.27.0=py310h06a4308_0
   - icu=73.1=h6a678d5_0
+  - idna=3.10=pyhd8ed1ab_1
   - importlib-metadata=8.6.1=pyha770c72_0
   - importlib_metadata=8.6.1=hd8ed1ab_0
   - ipykernel=6.29.5=py310h06a4308_1
+  - ipython=8.34.0=pyh907856f_0
   - ipywidgets=8.1.5=py310h06a4308_0
   - jedi=0.19.2=py310h06a4308_0
   - jinja2=3.1.6=py310h06a4308_0
@@ -84,7 +93,9 @@ dependencies:
   - jupyterlab_server=2.27.3=py310h06a4308_0
   - jupyterlab_widgets=3.0.13=py310h06a4308_0
   - krb5=1.20.1=h143b758_1
+  - lcms2=2.16=hb9589c4_0
   - ld_impl_linux-64=2.40=h12ee557_0
+  - lerc=4.0.0=h6a678d5_0
   - libabseil=20250127.0=cxx17_h6a678d5_0
   - libboost=1.82.0=h109eef0_2
   - libbrotlicommon=1.0.9=h166bdaf_7
@@ -92,6 +103,7 @@ dependencies:
   - libbrotlienc=1.0.9=h166bdaf_7
   - libcups=2.4.2=h2d74bed_1
   - libcurl=8.12.1=hc9e6f67_0
+  - libdeflate=1.22=h5eee18b_0
   - libedit=3.1.20230828=h5eee18b_0
   - libev=4.33=h7f8727e_1
   - libevent=2.1.12=hdbd6064_1
@@ -115,17 +127,21 @@ dependencies:
   - libssh2=1.11.1=h251f7ec_0
   - libstdcxx-ng=11.2.0=h1234567_1
   - libthrift=0.15.0=h1795dd8_2
+  - libtiff=4.5.1=hffd6297_1
   - libuuid=1.41.5=h5eee18b_0
+  - libwebp-base=1.3.2=h5eee18b_1
   - libxcb=1.15=h7f8727e_0
   - libxkbcommon=1.0.1=h097e994_2
   - libxml2=2.13.5=hfdd30dd_0
+  - llvmlite=0.44.0=py310hc1e8f15_1
   - locket=1.0.0=pyhd8ed1ab_0
   - lz4=4.3.2=py310h5eee18b_1
   - lz4-c=1.9.4=h6a678d5_1
   - markupsafe=3.0.2=py310h5eee18b_0
-  - matplotlib-base=3.10.0=py310hbfdbfaf_0
+  - matplotlib-inline=0.1.7=pyhd8ed1ab_1
   - mistune=3.1.2=py310h06a4308_0
   - msgpack-python=1.0.3=py310hbf28c38_1
+  - munkres=1.1.4=pyh9f0ad1d_0
   - mysql=8.4.0=h721767e_2
   - narwhals=1.33.0=pyhd8ed1ab_0
   - nbclient=0.10.2=py310h06a4308_0
@@ -137,8 +153,11 @@ dependencies:
   - nest-asyncio=1.6.0=py310h06a4308_0
   - notebook=7.3.2=py310h06a4308_0
   - notebook-shim=0.2.4=py310h06a4308_0
+  - numba=0.61.0=py310h6a678d5_1
   - numexpr=2.10.1=py310hd28fd6d_0
+  - numpy-base=2.0.0=py310h8a23956_1
   - openblas=0.3.4=ha44fe06_0
+  - openjpeg=2.5.2=he7f1fd0_0
   - openldap=2.6.4=h42fbc30_0
   - openssl=3.0.16=h5eee18b_0
   - orc=2.1.1=hd396ef6_0
@@ -151,14 +170,20 @@ dependencies:
   - partd=1.4.2=pyhd8ed1ab_0
   - patsy=1.0.1=pyhd8ed1ab_1
   - pcre2=10.42=hebb0a14_1
+  - pexpect=4.9.0=pyhd8ed1ab_1
+  - pickleshare=0.7.5=pyhd8ed1ab_1004
   - pip=25.0=py310h06a4308_0
+  - platformdirs=4.3.7=pyh29332c3_0
   - prometheus_client=0.21.0=py310h06a4308_0
   - prompt_toolkit=3.0.43=hd3eb1b0_0
   - properscoring=0.1=pyhd8ed1ab_1
   - ptyprocess=0.7.0=pyhd3eb1b0_2
+  - pure_eval=0.2.3=pyhd8ed1ab_1
   - pyarrow=19.0.0=py310h6a678d5_1
   - pyarrow-hotfix=0.6=pyhd8ed1ab_1
   - pycparser=2.21=pyhd3eb1b0_0
+  - pygments=2.19.1=pyhd8ed1ab_0
+  - pyparsing=3.2.3=pyhd8ed1ab_1
   - pyqt=6.7.1=py310h6a678d5_0
   - pyqt6-sip=13.9.1=py310h5eee18b_0
   - pysocks=1.7.1=py310h06a4308_0
@@ -168,6 +193,7 @@ dependencies:
   - python-json-logger=3.2.1=py310h06a4308_0
   - python-tzdata=2025.2=pyhd8ed1ab_0
   - python_abi=3.10=2_cp310
+  - pytz=2025.2=pyhd8ed1ab_0
   - pyyaml=6.0.2=py310h5eee18b_0
   - pyzmq=26.2.0=py310h6a678d5_0
   - qtbase=6.7.3=hdaa5aa8_0
@@ -187,6 +213,7 @@ dependencies:
   - rpds-py=0.22.3=py310h4aa5aa6_0
   - s2n=1.3.27=hdbd6064_0
   - scikit-learn=1.6.1=py310h6a678d5_0
+  - scipy=1.15.2=py310h210a465_1
   - seaborn=0.13.2=py310h06a4308_2
   - send2trash=1.8.2=py310h06a4308_1
   - setuptools=75.8.0=py310h06a4308_0
@@ -197,7 +224,9 @@ dependencies:
   - sortedcontainers=2.4.0=pyhd8ed1ab_1
   - soupsieve=2.5=py310h06a4308_0
   - sqlite=3.45.3=h5eee18b_0
+  - stack_data=0.6.3=pyhd8ed1ab_1
   - statsmodels=0.14.4=py310h5eee18b_0
+  - tbb=2021.8.0=hdb19cb5_0
   - tblib=3.1.0=pyhd8ed1ab_0
   - terminado=0.17.1=py310h06a4308_0
   - threadpoolctl=3.6.0=pyhecae5ae_0
@@ -210,8 +239,10 @@ dependencies:
   - typing-extensions=4.12.2=py310h06a4308_0
   - typing_extensions=4.12.2=py310h06a4308_0
   - tzdata=2025a=h04d1e81_0
+  - unicodedata2=14.0.0=py310h5764c6d_1
   - urllib3=2.3.0=py310h06a4308_0
   - utf8proc=2.6.1=h5eee18b_1
+  - wcwidth=0.2.13=pyhd8ed1ab_1
   - webencodings=0.5.1=py310h06a4308_1
   - websocket-client=1.8.0=py310h06a4308_0
   - wheel=0.45.1=py310h06a4308_0
@@ -233,38 +264,23 @@ dependencies:
       - affine==2.4.0
       - aiohappyeyeballs==2.6.1
       - aiohttp==3.11.15
-      - aiosignal==1.3.2
-      - asttokens==3.0.0
-      - async-timeout==5.0.1
-      - click==8.1.8
       - click-plugins==1.1.1
       - cligj==0.7.2
-      - contourpy==1.3.1
-      - cycler==0.12.1
-      - decorator==5.2.1
       - einops==0.8.1
-      - exceptiongroup==1.2.2
       - executing==2.2.0
       - filelock==3.18.0
       - fonttools==4.56.0
-      - frozenlist==1.5.0
-      - fsspec==2025.3.2
       - geopandas==1.0.1
       - grpcio==1.71.0
-      - idna==3.10
-      - ipython==8.34.0
+      - huggingface-hub==0.30.1
       - jsmin==3.0.1
       - kiwisolver==1.4.8
       - lightning==2.5.1
       - lightning-utilities==0.14.2
-      - llvmlite==0.44.0
       - markdown==3.7
       - matplotlib==3.10.1
-      - matplotlib-inline==0.1.7
-      - mpmath==1.3.0
       - multidict==6.3.0
       - networkx==3.4.2
-      - numba==0.61.0
       - numpy==2.1.3
       - nvidia-cublas-cu12==12.4.5.8
       - nvidia-cuda-cupti-cu12==12.4.127
@@ -279,35 +295,29 @@ dependencies:
       - nvidia-nccl-cu12==2.21.5
       - nvidia-nvjitlink-cu12==12.4.127
       - nvidia-nvtx-cu12==12.4.127
-      - pexpect==4.9.0
       - pillow==11.2.0
-      - platformdirs==4.3.7
       - prompt-toolkit==3.0.50
       - propcache==0.3.1
       - protobuf==6.30.2
       - psutil==7.0.0
-      - pure-eval==0.2.3
-      - pygments==2.19.1
       - pyogrio==0.10.0
-      - pyparsing==3.2.3
       - pyproj==3.7.1
       - pysteps==1.16.0
       - pytorch-lightning==2.5.1
-      - pytz==2025.2
       - rasterio==1.4.3
+      - regex==2024.11.6
       - rioxarray==0.18.2
-      - scipy==1.15.2
+      - safetensors==0.5.3
       - shapely==2.0.7
-      - stack-data==0.6.3
       - sympy==1.13.1
       - tensorboard==2.19.0
       - tensorboard-data-server==0.7.2
+      - tokenizers==0.21.1
       - torch==2.6.0
       - torchmetrics==1.7.0
       - tqdm==4.67.1
+      - transformers==4.50.3
       - triton==3.2.0
-      - wcwidth==0.2.13
       - werkzeug==3.1.3
-      - yarl==1.18.3
       - zstandard==0.23.0
-prefix: /home/users/ej127/miniconda3/envs/diff
+prefix: /home/users/mb625/miniconda3/envs/diff
